@@ -1,15 +1,6 @@
 server:
   port: 8080
 
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 4000
-
-
 ribbon:
   ServerListRefreshInterval: 15000
 
