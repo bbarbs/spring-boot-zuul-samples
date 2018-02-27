@@ -46,3 +46,6 @@ Then in customer service generate jar using **gradle build**.
 Then run customer jar ex: **java -Dserver.port=8090 -jar customer-0.0.1-SNAPSHOT.jar** you can run another application in another port like 8091, 8092.
 <br/>
 After that you can check it here: http://localhost:8080/check-load-balancing, try to refresh the browser and port will change.
+<br/>
+<br/>
+For testing you can use Postman or other tools.
