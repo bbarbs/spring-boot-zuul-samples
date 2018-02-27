@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+customer-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: http://localhost:8090, http://localhost:8091, http://localhost:8092
+    ServerListRefreshInterval: 15000
+
+zuul:
+  ignored-services: "*"
+  routes:
+    customers:
+      path: /customers/**
+      serviceId: customer-service
+      stripPrefix: false
+    check-load-balance:
+      path: /check-load-balancing
+      serviceId: customer-service
+      stripPrefix: false
+
+spring:
+  application:
+    name: gateway-service
+
+management:
+  security:
+    enabled: false
+
+
+
